@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   background-color: var(--bg);
+   justify-content: center; /* центрирует по главной оси(горизонталь)*/
+   align-items: center; /* центрирурует по попереченой оси(вертикаль)*/
+   min-height: 100vh;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column; /* главная ось теперь вертикальная, поперечная теперь горизонтальная */
+  gap: 20px;
+  background: var(--card-bg);
+  border: var(--border-width) solid var(--border-color);
+  min-height: 500px;
+  min-width: 500px;
+  justify-content: center; /* по вертикали */
+  align-items: center; /* по горизонтали*/
+  border-radius: 16px;
+}
+
+.app__search-city {
+    display: flex;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 999px;
+}
+
+
+.app__search-city:focus-within {
+    border-color: #3b82f6;
+}
+.app__input {
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    color: var(--text);
+    outline: none;
+}
+
+.app__btn {
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.app__btn:hover {
+    background: var(--accent-hover);
+}
+
+.app__btn:focus {
+    background: var(--focus-color)
+}
+
+#result {
+    background: var(--result-bg);
+    color: var(--text);
+    width: 245px;
+    height: 200px;
+    text-align: center;
+    border-radius: 16px;
+    border: var(--border-width) solid var(--border-color);
+
+}
+
+.weather__info {
+   
+}
+
+.weather-city {
+    margin: 15px;
+    font-size: 18px;
+}
+
+.weather-temp {
+    font-weight: 600;
+}
+
+.weather__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px
+}
+
+.weather-emoj__icon {
+    font-size: 36px;
+    line-height: 3;
+}
+
+.weather-emoj__text {
+
+}
+
+.weather-img {
+    width: 70px;
+    height: 70px;
+}
+
+
+:root {
+  --bg: #e8f1f8;           /* фон страницы — светло-голубой */
+  --card-bg: #ffffff;       /* карточка — белая */
+  --result-bg: #f5f9fc;     /* результат — почти белый с голубым */
+  --text: #1a2b3c;          /* основной текст — тёмно-синий, не чёрный */
+  --text-muted: #6b7c8f;    /* второстепенный — серо-голубой */
+  --focus-color: #3b82f6;   
+  --accent-hover: #5b9cf7;   /* +10% светлоты, тот же оттенок */
+  --border-width: 2px;
+  --border-color: grey ;         /* заметный серо-голубой */
+  --border-color-focus: #3b82f6;   /* синий при фокусе */
+}
