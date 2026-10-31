@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="css/test.css" />
   </head>
   <body>
+    <dialog id="history" class="history">
+      <header class="history_head">
+        <h3>История погоды</h3>
+        <button class='history__btn' id="historyClose" aria-label="Закрыть историю погоды">×</button>
+      </header>
+      <ul id="history-list" class="history__ul"></ul>
+    </dialog>
     <div class="app">
+      <header class="app__header">
+        <button class="app__header-btn" id='historyOpen' aria-label="Открыть">История</button>
+      </header>
       <h1>Погода</h1>
+      <div class="app__body">
       <form class="app__search-city" id="app__form">
         <input
           type="text"
@@ -20,7 +31,9 @@
       </form>
       <div class="app__footer" id="result">
       </div>
+      </div>
     </div>
-    <script src="tests.js" defer></script>
+   <script src="scripts/main.js" type="module"></script>
   </body>
 </html>
+
