@@ -48,10 +48,12 @@ const historyClose = document.getElementById('historyClose')
 historyOpen.addEventListener('click', () => {
   const items = readHistory()
   history.showModal()
+  console.log('test branches1')
    renderHistory(items)
 })
 
 historyClose.addEventListener('click', () => {
+  console.log('test branches2')
   history.close()
 })
 
